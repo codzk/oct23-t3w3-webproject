@@ -1,5 +1,4 @@
-// Declare JS data that we want to store
-
+// Declare JS data that we want to store 
 let cssThemes = [
 
 ];
@@ -9,55 +8,54 @@ let pageTheme = "dark";
 
 
 /**
- * Return, assign, and return the latest stored CSS theme list from the browser localstorage.
+ * Retrieve, assign, and return the latest stored CSS theme list from the browser localstorage.
+ * @author BigfootDS
  *
- * @returns Array of objects.
+ * @returns Array of objects. 
  */
-
-
 function getStoredCssThemes(){
-    // Update the cssTheme array
-    let rawJsonStringCssThemes = localStorage.getItem("cssThemes");
-    cssThemes = JSON.parse(rawJsonStringCssThemes)
-    // Return the updated data
-    return cssThemes;
+	// Update the cssTheme array
+	let rawJsonStringCssThemes = localStorage.getItem("cssThemes");
+	cssThemes = JSON.parse(rawJsonStringCssThemes);
+	// Return the updated data 
+	return cssThemes;
 }
 
 
 /**
- * Return, assign, and return the latest stored page theme from the browser localstorage.
+ * Retrieve, assign, and return the latest stored page theme from the browser localstorage.
+ * @author BigfootDS
  *
  * @returns String. Should be "light" or "dark".
  */
-
 function getStoredPageTheme(){
-    pageTheme = localStorage.getItem("pageTheme");
-    return pageTheme;
-
+	pageTheme = localStorage.getItem("pageTheme");
+	return pageTheme;
 }
+
+
 // Create/Update localstorage
 function setCssThemesToStorage(){
-    let dataAsJsonString = JSON.stringify(cssThemes);
-    localStorage.setItem("CssThemes", dataAsJsonString);
+	let dataAsJsonString = JSON.stringify(cssThemes);
+	localStorage.setItem("cssThemes", dataAsJsonString);
 }
 
 function setPageThemeToStorage(){
-    localStorage.setItem("pageTheme", pageTheme);
+	localStorage.setItem("pageTheme", pageTheme);
 }
 
-// check if data exists,
+
+// Check if data exists,
 // if it does, retrieve it,
 // else, set default variables to localstorage
-
-if (localStorage.getItem("pageTheme") && localStorage.getItem("cssThemes").length > 0){
-    getStoredCssThemes();
-    getStoredPageTheme();
-
-}else {
-    setCssThemesToStorage();
-    setPageThemeToStorage();
-
+if (localStorage.getItem("pageTheme") && localStorage.getItem("cssThemes")?.length > 0){
+	getStoredCssThemes();
+	getStoredPageTheme();
+} else {
+	setCssThemesToStorage();
+	setPageThemeToStorage();
 }
+
 
 
 
@@ -70,26 +68,27 @@ if (localStorage.getItem("pageTheme") && localStorage.getItem("cssThemes").lengt
 /*
 
 cssThemes = [
-    {
-        name: "blah",
-        hex: "000000"
-    },
-    {
-        name: "blah",
-        hex: "000000"
-    }
+	{
+		name: "blah blah 100",
+		hex: "000000"
+	},
+	{
+		name: "blah blah 100",
+		hex: "000000"
+	}
 ]
 
-"[[Object Object], [Object object]"
+"[[Object object], [Object object]]"
 
 JSON.stringify(cssThemes);
 
-"[{'name' : 'blah', 'hex' : '000000'}, {'name' : 'blah' , 'hex' : '000000'}]"
-
-
-
-
+"[{'name':'blah blah 100', 'hex': '000000'}, {'name':'blah blah 100', 'hex': '000000'}]""
 
 */
 
-// Delete localstorage
+
+
+
+
+
+// Delete localstorage 
