@@ -41,6 +41,9 @@ function setCssThemesToStorage(){
     localStorage.setItem("CssThemes", dataAsJsonString);
 }
 
+function setPageThemeToStorage(){
+    localStorage.setItem("pageTheme", pageTheme);
+}
 /*
 
 cssThemes = [
