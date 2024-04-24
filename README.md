@@ -2,8 +2,8 @@
 
 # Deployments
 
-- [GitHub Pages] (https://codzk.github.io/oct23-t3w3-webproject/src/index.html)
-- [Netlify] (https://zekelocalstorageexample.netlify.app/)
+- [GitHub Pages](https://codzk.github.io/oct23-t3w3-webproject/src/index.html)
+- [Netlify](https://zekelocalstorageexample.netlify.app/)
 
 # Features
 
